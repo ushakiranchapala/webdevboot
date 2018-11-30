@@ -1,0 +1,35 @@
+<% include partials/header %>
+
+	
+
+<div class="container">
+	<header class="jumbotron">
+	    <div>
+		     <h1> welcome to campme </h1>
+		     <p> here you can find the camp grounds</p>
+		     <p> 
+		       <a class ="btn btn-primary btn_large" href="/campgrounds/new"> Add new campground</a> 
+		     </p>
+	     </div>
+	</header>
+
+	
+	<div class="row text-center" style="display:flex; flex_wrap: wrap">
+		<% campgrounds.forEach(function(campground){ %>	
+		   <div class="col-mid-3 col-sm-6">
+             <div class="thumbnail">
+			  
+			   <img src = "<%= campground.image %>">
+			   <div>
+			   	<h4><%= campground.name %></h4>
+			   </div>	
+			 </div>
+
+		   </div>
+
+
+		<% }); %>
+	</div>
+ </div>
+ <% include partials/footer %>
+ 
